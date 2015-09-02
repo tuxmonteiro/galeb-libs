@@ -6,7 +6,7 @@ Official client libraries.
 Client libraries for developing applications that communicate to the Galeb Manager service.
 ```
 
-# License
+## License
 
 ```Copyright
 Copyright (c) 2014-2015 Globo.com - All rights reserved.
