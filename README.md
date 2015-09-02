@@ -3,7 +3,8 @@ Galeb libs
 Official client libraries.
 
 ```
-Client libraries for developing applications that communicate to the Galeb Manager service.
+Client libraries for developing applications that communicate 
+to the Galeb Manager service.
 ```
 
 ## License
