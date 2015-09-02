@@ -12,7 +12,13 @@ shared:
 	gcc -shared -W1 -lc++ -o lib$(LIBNAME).so $(LIBNAME).o
 	cp lib$(LIBNAME).so ../lib/lib$(LIBNAME).so
 
-.PHONY: clean
+test:
+	gcc -c Core_test.cpp
+	gcc -W1 -lc++ -lboost_unit_test_framework -o Core_test.out Core_test.o
+	echo
+	./Core_test.out
+
+.PHONY: clean test dynamic shared
 
 clean:
-	rm -rf *.o *.so *.dylib ../lib/*
+	rm -rf *.o *.so *.dylib *.out ../lib/*
