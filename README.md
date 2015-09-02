@@ -1,2 +1,3 @@
 # galeb-libs
-Galeb client libraries
+
+Official client libraries
