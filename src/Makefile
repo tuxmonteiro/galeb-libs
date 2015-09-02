@@ -1,16 +1,16 @@
-LIBNAME=undef
+LIBNAME=galeb
 
 all:
 
 dynamic:
-	gcc -c -fPIC $(LIBNAME).c
-	gcc -dynamiclib -lncurses -r/usr/lib -o lib$(LIBNAME).dylib XXX.o
-	cp -f lib$(LIBNAME).dylib ../lib/libXXX.dylib
+	gcc -c -fPIC $(LIBNAME).cpp
+	gcc -dynamiclib -o lib$(LIBNAME).dylib $(LIBNAME).o
+	cp -f lib$(LIBNAME).dylib ../lib/lib$(LIBNAME).dylib
 
 shared:
-	gcc -c -fPIC $(LIBNAME).c
-	gcc -shared -W1 -lncurses -r/usr/lib -soname,lib$(LIBNAME).so -o libXXX.so XXX.o
-	cp lib$(LIBNAME).so ../lib/libXXX.so
+	gcc -c -fPIC $(LIBNAME).cpp
+	gcc -shared -W1 -soname,lib$(LIBNAME).so -o lib$(LIBNAME).so $(LIBNAME).o
+	cp lib$(LIBNAME).so ../lib/lib$(LIBNAME).so
 
 .PHONY: clean
 
