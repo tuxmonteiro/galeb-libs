@@ -9,7 +9,7 @@ dynamic:
 
 shared:
 	gcc -c -fPIC $(LIBNAME).cpp
-	gcc -shared -W1 -soname,lib$(LIBNAME).so -o lib$(LIBNAME).so $(LIBNAME).o
+	gcc -shared -W1 -o lib$(LIBNAME).so $(LIBNAME).o
 	cp lib$(LIBNAME).so ../lib/lib$(LIBNAME).so
 
 .PHONY: clean
