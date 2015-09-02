@@ -67,9 +67,7 @@ _testmain.go
 
 .DS_Store
 target/
-bin/
 build/
-lib/
 *~
 *.sw?
 /.bundle
